@@ -1,21 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>z7 Communication Services</title>
-    <meta property="og:title" content="Z7 Communication Services">
-<meta property="og:description" content=>
-<meta property="og:url" content="https://z7commservices.online/">
-<meta property="og:image" content="https://z7commservices.online">
-<meta property="og:type" content="website">
-
-    <script src="./script.js"></script>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" style="scroll-behavior: smooth;">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,6 +33,11 @@
 
     a {
       text-decoration: none;
+    }
+
+    /* --- AJUSTE DE ROLAGEM (SOLUÇÃO 2 EMBUTIDA) --- */
+    #form-section {
+      scroll-margin-top: 100px; /* Garante que pare no topo perfeito, sem cortar o texto */
     }
 
     /* --- HEADER --- */
@@ -393,34 +382,6 @@
     .info-box {
       background: var(--card-bg-dark);
       padding: 1.2rem;
-      border-radius: 8px;
-    }
-
-    .info-box h5 {
-      font-size: 0.9rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .info-box p {
-      font-size: 0.8rem;
-      color: #94a3b8;
-    }
-
-    footer {
-      max-width: 1200px;
-      margin: 2rem auto 0;
-      text-align: left;
-      font-size: 0.75rem;
-      color: #64748b;
-    }
-
-    @media (max-width: 900px) {
-      .hero, .grid-container, .cta-container {
-        grid-template-columns: 1fr;
-      }
-      .cards-grid, .dark-cards-grid {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
@@ -432,149 +393,40 @@
       <div class="brand-icon">🎓</div>
       <div class="brand-text">
         <h1>Treinamento OPI/VRI para Bilíngues de US ENG ⇄ PT-BR</h1>
-        <p>Programa Pré-Certificação de 40 Horas</p>
+        <p>Programa de Pré-Certificação de 40 Horas</p>
       </div>
     </div>
-   
-    <a href="#form-section" class="btn-header">✉ Inscreva-se Agora</a>
+    <!-- O link abaixo agora vai deslizar suavemente até o formulário -->
+    <a href="#form-section" class="btn-header">Inscreva-se Agora</a>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero">
+  <!-- Adicionamos o ID exatamente no topo da seção inteira para alinhar perfeitamente -->
+  <section class="hero" id="form-section">
     <div class="hero-content">
-      <span class="badge-pill">🟡 Inscrições Abertas para Turma Beta - Máximo 6 alunos</span>
-      <h2>Interpretação Comunitária para <span>Saúde</span>, <span>Jurídico</span> e <span>Assistência Social</span></h2>
-      <p><p>
-    Participe da nossa Turma Beta exclusiva com preço promocional especial. Um Programa Pré-Certificação de 40 horas voltado para <strong style="white-space: nowrap;">Intérpretes Comunitários de Português Brasileiro</strong>, com instrução personalizada em pequenos grupos.
-</p>
-                                                                      
-        
-       <p>🛠️ Ótimas oportunidades de trabalho: a expansão da comunidade brasileira nos <span style="white-space: nowrap;">Estados Unidos</span> aumentou drasticamente a demanda por intérpretes nas áreas de saúde e jurídica.</p>
- 
-        
-        <p>💰 Potencial de ganhos: receba em dólar trabalhando nos EUA ou diretamente do Brasil.</p> 
-     
+      <span class="badge-pill">✨ Inscrições Abertas para Turma Beta - Máximo 6 alunos</span>
+      <h2>Interpretação Comunitária para <span>Saúde, Jurídico</span> e <span>Assistência Social</span></h2>
+      <p>Participe de nossa Turma Beta exclusiva com preço promocional especial. Um Programa de Pré-Certificação de 40 horas voltado para <strong>Intérpretes Comunitários de Português Brasileiro</strong>, com instrução personalizada em pequenos grupos.</p>
+      
+      <p>💼 <strong>Ótimas oportunidades de trabalho:</strong> a expansão da comunidade brasileira nos Estados Unidos aumentou drasticamente a demanda por intérpretes nas áreas de saúde e jurídica.</p>
+      <p>💰 <strong>Potencial de ganhos:</strong> receba em dólar trabalhando nos EUA ou diretamente do Brasil.</p>
+      
       <div class="tags">
-        <span class="tag">🎗 Pré-Certificação</span>
-        <span class="tag">🔤 Inglês Americano ⇄ Português Brasileiro</span>
+        <span class="tag">📜 Pré-Certificação</span>
+        <span class="tag">🇺🇸🇧🇷 Inglês Americano ⇄ Português Brasileiro</span>
       </div>
     </div>
 
-    <!-- FORMSPREE INTEGRATED FORM -->
-    <div class="form-card" id="form-section">
-      <h3>🚀Quero Participar!</h3>
+    <!-- FORM CARD -->
+    <div class="form-card">
+      <h3>✍️ Quero Participar!</h3>
       <p>Garanta sua vaga na Turma Beta e receba detalhes sobre o treinamento e o preço promocional.</p>
-      <form action="https://formspree.io/f/mrpzjkan" method="POST">
+      <form>
         <div class="form-group">
-          <input type="text" name="nome" placeholder="Seu Nome" required />
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Endereço de E-mail" required />
+          <input type="text" placeholder="Seu Nome" required />
         </div>
         <div class="form-group">
-          <input type="tel" name="telefone" placeholder="Número de Telefone" required />
+          <input type="email" placeholder="Endereço de E-mail" required />
         </div>
         <div class="form-group">
-          <textarea name="Nível de Inglês" rows="3" placeholder="Qual é seu nível de Inglês? Você tem experiência como intérprete?  (B1/B2/C1/C2 - Não sei)".                                                                         Este é um programa de formação profissional técnica, não um curso de inglês. Para garantir o dinamismo das práticas e atender as exigências das empresas contratantes, exigimos nível de fluência a partir do nível B1 (intermediário)"
-"></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Candidatar-se à Turma Beta</button>
-      </form>
-    </div><div class="form-card" id="form-section">
-      <h3>⚠️ Prazo de Inscrições Limitado!</h3>
-  </section>
-
-  <!-- CURRICULUM SECTION -->
-  <section class="curriculum">
-    <div class="section-title-sm">CURRÍCULO DE 40 HORAS</div>
-    <h3 class="section-title">Domine as habilidades para atuar em ambientes complexos de interpretação.</h3>
-
-    <div class="grid-container">
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-icon">➕</div>
-          <h4>Ambientes de Saúde</h4>
-          <p>Domine protocolos profissional (provider) - paciente (client), ética, terminologia médica e interpretação clínica.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">⚖</div>
-          <h4>Ambientes Jurídicos</h4>
-          <p>Navegue por tribunais, depoimentos e documentação legal com precisão e confiança.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">👥</div>
-          <h4>Assistência Social</h4>
-          <p>Forneça acesso linguístico essencial em contextos de educação, serviço social e apoio comunitário.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">📋</div>
-          <h4>Ética e Padrões</h4>
-          <p>Estudo aprofundado do Código de Ética Internacional e Padrões de Prática para intérpretes.</p>
-        </div>
-      </div>
-
-      <div class="dark-panel">
-        <div class="dark-cards-grid">
-          <div class="dark-card">
-            <h5>Aulas Personalizadas</h5>
-            <p>Para Falantes do Inglês Americano e Português Brasileiro (US ENG ⇄ PT-BR)</p>
-          </div>
-          <div class="dark-card">
-            <h5>Turma Beta</h5>
-            <p>Máximo de 6 alunos (BETA COHORT)</p>
-          </div>
-          <div class="dark-card">
-            <h5>Condições Especiais</h5>
-            <p>Condições de Lançamento</p>
-          </div>
-          <div class="dark-card">
-            <h5>Carga Horária</h5>
-            <p>40 Horas - Pré-Requisito Mínimo Exigido pelas LSPs (Language Service Providers)</p>
-          </div>
-        </div>
-
-        <div class="transparency-box">
-          <h5>NOTA DE TRANSPARÊNCIA E RESPONSABILIDADE</h5>
-          <p>Este programa de treinamento oferece certificado de conclusão por participação. Ele comprova que você assistiu às aulas, cumpriu a carga horária e aprendeu sobre a teoria, a ética e as técnicas básicas. Ele cumpre o pré-requisito básico que as LSPs exigem para te contratar.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER CTA SECTION -->
-  <section class="footer-cta">
-    <div class="cta-container">
-      <div class="cta-content">
-        <div class="section-title-sm">TURMA BETA LIMITADA</div>
-        <h2>Pronto para avançar na sua carreira de intérprete?</h2>
-        <p>Turma Beta exclusiva! Máximo de 6 alunos (condição promocional especial). Dê o primeiro passo rumo à certificação profissional.</p>
-        <a href="#form-section" class="btn-cta">Candidatar-se à Turma Beta</a>
-      </div>
-
-      <div class="info-boxes">
-        <div class="info-box">
-          <h5>💻 Formato do Curso</h5>
-          <p>Um currículo abrangente de 40 horas projetado para profissionais, com horários flexíveis.</p>
-        </div>
-        <div class="info-box">
-          <h5>📋 Pré-requisitos</h5>
-          <p>É exigido nível mínimo de fluência em Inglês (B1*) e Português para realizar este curso.</p>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      <p>© 2026 US ENG ⇄ PT-BR OPI/VRI - Community Interpreting Foundations by Z7 Communication Services. Todos os direitos reservados.</p>
-    </footer>
-  </section>
-
-</body>
-</html>
-
-
-
-
-</html>
-
-
-
+          <input type="tel" placeholder="Número de Telefone" required />
